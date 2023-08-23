@@ -1,6 +1,5 @@
 import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
 import { ValidatorService } from '@thefirstspine/certificate-authority';
-import { LogsService } from '@thefirstspine/logs-nest';
 
 /**
  * 
@@ -8,7 +7,7 @@ import { LogsService } from '@thefirstspine/logs-nest';
 @Injectable()
 export class CertificateGuard implements CanActivate {
 
-  constructor(private readonly logsService: LogsService) {}
+  constructor() {}
 
   /**
    * @inheritdoc
@@ -32,7 +31,7 @@ export class CertificateGuard implements CanActivate {
       context.switchToHttp().getResponse().headers['x-client-cert-encoding'] :
       supportedEncoding[0];
     if (!supportedEncoding[encoding]) {
-      this.logsService.error(`Unsupported x-client-cert-encoding: ${encoding}`);
+      console.error(`Unsupported x-client-cert-encoding: ${encoding}`);
       return false;
     }
 
@@ -42,7 +41,7 @@ export class CertificateGuard implements CanActivate {
     // Validate
     const validatorService: ValidatorService = new ValidatorService();
     if (!validatorService.challenge(certificate)) {
-      this.logsService.error(`Cannot challenge the public certificate with private key`);
+      console.error(`Cannot challenge the public certificate with private key`);
       return false;
     }
 

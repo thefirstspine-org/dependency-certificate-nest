@@ -1,14 +1,12 @@
 {
   "name": "@thefirstspine/certificate-nest",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Built on top of @thefirstspine/certificate-authority. Provides Nest services & guard.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "peerDependencies": {},
   "dependencies": {
-    "@nestjs/common": "^7.1.2",
-    "@thefirstspine/certificate-authority": "0.0.1",
-    "@thefirstspine/logs-nest": "^1.0.0"
+    "@nestjs/common": "^7.6.18",
+    "@thefirstspine/certificate-authority": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.0.9",

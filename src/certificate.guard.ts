@@ -2,7 +2,7 @@ import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
 import { ValidatorService } from '@thefirstspine/certificate-authority';
 
 /**
- * 
+ * Guard for certificate authority
  */
 @Injectable()
 export class CertificateGuard implements CanActivate {

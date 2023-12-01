@@ -29,7 +29,7 @@ export class CertificateGuard implements CanActivate {
     };
     const encoding: string = context.switchToHttp().getRequest().headers['x-client-cert-encoding'] ?
       context.switchToHttp().getRequest().headers['x-client-cert-encoding'] :
-      supportedEncoding[0];
+      supportedEncoding['base64'];
     if (!supportedEncoding[encoding]) {
       console.error(`Unsupported x-client-cert-encoding: ${encoding}`);
       return false;

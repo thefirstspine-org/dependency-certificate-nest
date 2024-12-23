@@ -1,12 +1,12 @@
 {
   "name": "@thefirstspine/certificate-nest",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Built on top of @thefirstspine/certificate-authority. Provides Nest services & guard.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "dependencies": {
     "@nestjs/common": "^10.4.15",
-    "@thefirstspine/certificate-authority": "^1.0.7"
+    "@thefirstspine/certificate-authority": "^1.0.8"
   },
   "devDependencies": {
     "@golevelup/ts-jest": "^0.6.1",

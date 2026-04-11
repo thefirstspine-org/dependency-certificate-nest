@@ -89,3 +89,6 @@ fabric.properties
 
 # Local History for Visual Studio Code
 .history/
+
+# Typescript temporary build file
+tsconfig.tsbuildinfo

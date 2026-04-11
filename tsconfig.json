@@ -11,10 +11,14 @@
       "target": "es6",
       "sourceMap": true,
       "declarationMap": true,
+      "rootDir": "./src",
       "outDir": "./lib",
-      "baseUrl": ".",
       "allowSyntheticDefaultImports": true,
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+      "types": ["node"]
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": [
+    "**/*.spec.ts"
+  ]
 }
